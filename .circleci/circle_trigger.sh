@@ -15,6 +15,7 @@ LAST_COMPLETED_BUILD_SHA=`curl -Ss -u "${CIRCLE_TOKEN}:" "${LAST_COMPLETED_BUILD
 
 echo $CIRCLE_API
 echo $CIRCLE_TOKEN
+echo $CIRCLE_BUILD_NUM
 
 if  [[ ${LAST_COMPLETED_BUILD_SHA} == "null" ]]; then
   echo -e "\e[93mThere are no completed CI builds in branch ${CIRCLE_BRANCH}.\e[0m"
